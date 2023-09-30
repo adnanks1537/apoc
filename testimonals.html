@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testimonials</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section class="footer">
+        <div class="footer-heading">
+            <p class="footer-text">TESTIMONIALS</p>
+        </div>
+
+        <div class="testimonals-cards">
+            <div class="tcard-one">
+                <img src="images/AZAD.jpg">
+                <div class="card-one-content">
+                    <h1>Azad Moopen</h1>
+                </div>
+            </div>
+
+            <div class="tcard-two">
+                <img src="images/SASI.jpg">
+                <div class="card-one-content">
+                    <h1>Sasi Tharoor</h1>
+                </div>
+            </div>
+
+            <div class="tcard-three">
+                <img src="images/sree.jpg">
+                <div class="card-one-content">
+                    <h1>Sreekandan Nair</h1>
+                </div>
+            </div>
+
+            <div class="tcard-four">
+                <img src="images/YAS.jpg">
+                <div class="card-one-content">
+                    <h1>Farhan Yasin</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Find all testimonial cards
+            const testimonialCards = document.querySelectorAll('.testimonals-cards > div');
+
+            // Function to animate a card with a specified delay
+            function animateCardWithDelay(card, delay) {
+                setTimeout(function () {
+                    card.classList.add('animate-card');
+                }, delay);
+            }
+
+            // Animate testimonial cards sequentially
+            testimonialCards.forEach(function (card, index) {
+                // Delay each card by 300 milliseconds (adjust as needed)
+                const delay = index * 300;
+                animateCardWithDelay(card, delay);
+            });
+        });
+    </script>
+
+</body>
+</html>
